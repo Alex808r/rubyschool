@@ -1,0 +1,2 @@
+Apples       Oranges      Pineapples
+$20          $10          $30

@@ -1,0 +1,2 @@
+require "./les29"
+require "sinatra/activerecord/rake"

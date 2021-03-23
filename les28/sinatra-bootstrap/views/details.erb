@@ -1,0 +1,29 @@
+<h4>Post details: </h4>
+  <p>
+      <%=@row['content'] %>
+      <br/>
+      Added at: <%=@row['created_date'] %>
+      <br/>
+  </p>
+<br/>
+<h4>Comments</h4>
+<br/>
+<%@comments.each do |comment| %>
+  <p>
+    <hr/>
+       <%= comment['content']%>
+  <br/>
+    <span style="font-size: 75%; color: #999">  Add at: <%=comment['created_date'] %></span>
+  </p>
+<%end%>
+              <p>
+                    <form action="/details/<%=@row['id'] %>" method="post">
+                            <div class="form-floating">
+                              <textarea class="form-control" id="floatingTextarea2" name="content" placeholder="Type comment text here"
+                                                style="height: 100px"></textarea>
+                              <br/>
+                            </div>
+                      <button type="submit" class="btn btn-primary">Add comment</button>
+                    </form>
+              </p>
+
